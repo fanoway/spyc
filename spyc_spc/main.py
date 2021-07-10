@@ -57,7 +57,7 @@ arguments = docopt(__doc__, version=f"SPYC {__version__}")
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 # Get plot options from json source file
-with open("spyc/plot_options.json") as f:
+with open("spyc_spc/plot_options.json") as f:
     plot_types: Dict[str, Any] = json.load(f)
 
 # Manage verbose and debug output levels
