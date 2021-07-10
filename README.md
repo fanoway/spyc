@@ -4,6 +4,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![build](https://github.com/fanoway/spyc/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/fanoway/spyc/actions/workflows/build.yaml)
 [![codecov](https://codecov.io/gh/fanoway/spyc/branch/main/graph/badge.svg?token=RMHSZXZSLK)](https://codecov.io/gh/fanoway/spyc)
+[![PyPI version](https://badge.fury.io/py/spyc-spc.svg)](https://badge.fury.io/py/spyc-spc)
 
 Simple tool to help plot SPC data for production purposes
 
