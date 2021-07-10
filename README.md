@@ -22,7 +22,7 @@ python3 -m pipx ensurepath
 spyc can then be installed from  pypi
 
 ```
-pipx install spyc
+pipx install spyc-spc
 ```
 
 ## Usage
