@@ -38,8 +38,6 @@ class SPCFigure(go.FigureWidget):  # pylint: disable=too-many-ancestors
         """
         # self.log object
         self.log: logging.Logger = logging.getLogger(__name__)
-
-        print(title)
         super().__init__(*args, **kwargs)
         self.update_layout(title=title, font_family="Arial")
 
