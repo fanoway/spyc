@@ -14,23 +14,22 @@ Interactive plots are outputted in ther browser using plotly and dash
 ## Installation
 pipx is the recommened tool for installation as it will install in a virtual enviroment
 
-'''
+```
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
-'''
+```
 
 spyc can then be installed from  pypi
 
-
-'''
+```
 pipx install spyc
-'''
+```
 
 ## Usage
 
 spyc can be ran as follows to display the help
 
-'''
+```
 spyc
-''''
+```
 
