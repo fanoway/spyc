@@ -39,8 +39,9 @@ jobs:
                 poetry run python -m tox -e py
 
           - name: Generate Coverage Report
+            if: contains(env.USING_COVERAGE, matrix.python-version)
             run: |
-              poetry run coverage run -m spyc
+              poetry run coverage run -m pytest tests/
 
           - name: "Upload coverage to Codecov"
             uses: codecov/codecov-action@v1
