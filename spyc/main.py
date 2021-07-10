@@ -28,6 +28,7 @@ import glob
 import logging
 from typing import List, Dict, Any, Union
 import json
+import webbrowser
 
 from mainentry import entry
 from docopt import docopt  # type: ignore
@@ -485,8 +486,9 @@ def main():
             )
 
             try:
-                wsgiserver.start()
                 print("Server started")
+                webbrowser.open(f"http://{url}:{port}/")
+                wsgiserver.start()
             except KeyboardInterrupt:
                 wsgiserver.stop()
                 print("Server stopped")
