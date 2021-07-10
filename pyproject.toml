@@ -61,7 +61,7 @@ commands =
 	poetry run flake8 spyc_spc/
 	poetry run pylint spyc_spc/ --exit-zero
 	poetry run pylint spyc_spc/ -E
-	poetry run mypy spyc_spcc/
+	poetry run mypy spyc_spc/
 	poetry run pytest --cov=spyc_spc tests/
 
 """
