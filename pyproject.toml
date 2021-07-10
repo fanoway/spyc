@@ -16,6 +16,7 @@ ipywidgets = "^7.6.3"
 dash = "^1.20.0"
 docopt = "^0.6.2"
 mainentry = "^2.0"
+cheroot = "^8.5.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
