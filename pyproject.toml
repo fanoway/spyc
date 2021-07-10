@@ -34,7 +34,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-spyc = "spyc.main:main"
+spyc = "spyc_spc.main:main"
 
 [tool.black]
 line-length = 79
@@ -57,11 +57,11 @@ basepython = python3
 whitelist_externals = poetry
 
 commands =
-	poetry run black spyc/
-	poetry run flake8 spyc/
-	poetry run pylint spyc/ --exit-zero
-	poetry run pylint spyc/ -E
-	poetry run mypy spyc/
-	poetry run pytest --cov=spyc tests/
+	poetry run black spyc_spc/
+	poetry run flake8 spyc_spc/
+	poetry run pylint spyc_spc/ --exit-zero
+	poetry run pylint spyc_spc/ -E
+	poetry run mypy spspyc_spcc/
+	poetry run pytest --cov=spyc_spc tests/
 
 """
