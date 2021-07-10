@@ -5,7 +5,7 @@ init-hook='import os, sys; sys.path.append(os.path.join(os.getcwd(),'spyc'))'
 
 [BASIC]
 # Good variable names which should always be accepted, separated by a comma
-good-names= cp, cpk, vn, pdx, SD, md, df, e
+good-names= cp, cpk, vn, pdx, SD, md, df, e,pn
 
 
 [MISCELLANEOUS]
