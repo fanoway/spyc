@@ -39,6 +39,7 @@ class SPCFigure(go.FigureWidget):  # pylint: disable=too-many-ancestors
         # self.log object
         self.log: logging.Logger = logging.getLogger(__name__)
 
+        print(title)
         super().__init__(*args, **kwargs)
         self.update_layout(title=title, font_family="Arial")
 
@@ -168,6 +169,7 @@ class SPCFigure(go.FigureWidget):  # pylint: disable=too-many-ancestors
         self.update_layout(
             uniformtext_minsize=8,
             uniformtext_mode="hide",
+            showlegend=True,
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1
             ),

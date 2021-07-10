@@ -16,4 +16,4 @@ build: tox # run tox first before building
 	poetry build
 
 run:
-	poetry run python -m spyc.main
+	poetry run python -m spyc.main plot tests -d
