@@ -62,7 +62,7 @@ try:
         plot_types: Dict[str, Any] = json.load(f)
 except FileNotFoundError:
     with open("plot_options.json") as f:
-        plot_types: Dict[str, Any] = json.load(f)
+        plot_types = json.load(f)
 
 # Manage verbose and debug output levels
 if arguments["--verbose"]:
