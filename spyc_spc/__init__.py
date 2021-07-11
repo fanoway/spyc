@@ -1,3 +1,5 @@
 """spyc (pronounced spicy) module."""
 
-__version__ = "1.0.1"
+import importlib.metadata
+
+__version__ = importlib.metadata.version("spyc_spc")
