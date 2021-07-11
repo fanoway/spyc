@@ -26,7 +26,7 @@
 import os
 import glob
 import logging
-from typing import List, Dict, Any, Union
+from typing import List, Dict, Union
 import json
 import webbrowser
 import importlib.resources
