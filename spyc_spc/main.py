@@ -57,8 +57,12 @@ arguments = docopt(__doc__, version=f"SPYC {__version__}")
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 # Get plot options from json source file
-with open("spyc_spc/plot_options.json") as f:
-    plot_types: Dict[str, Any] = json.load(f)
+try:
+    with open("spyc_spc/plot_options.json") as f:
+        plot_types: Dict[str, Any] = json.load(f)
+except FileNotFoundError:
+    with open("plot_options.json") as f:
+        plot_types: Dict[str, Any] = json.load(f)
 
 # Manage verbose and debug output levels
 if arguments["--verbose"]:
