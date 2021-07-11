@@ -45,8 +45,7 @@ from cheroot.wsgi import PathInfoDispatcher  # type: ignore
 # these imports will not work if ran as a script
 # use python -m main
 from .__init__ import __version__  # type: ignore
-from .helpers.partnumber import PartNumber
-from .helpers.spcfigure import SPCFigure
+from .helpers.partnumber import PartNumberfrom .helpers.spcfigure import SPCFigure
 
 # create logger
 log = logging.getLogger(__name__)
@@ -61,7 +60,7 @@ try:
     with open("spyc_spc/plot_options.json") as f:
         plot_types: Dict[str, Any] = json.load(f)
 except FileNotFoundError:
-    with open("plot_options.json") as f:
+    with open(path.join(path.dirname(__file__), "plot_options.json")) as f:
         plot_types = json.load(f)
 
 # Manage verbose and debug output levels
