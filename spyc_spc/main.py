@@ -29,6 +29,7 @@ import logging
 from typing import List, Dict, Any, Union
 import json
 import webbrowser
+import importlib.resources
 
 from mainentry import entry
 from docopt import docopt  # type: ignore
@@ -57,15 +58,8 @@ arguments = docopt(__doc__, version=f"SPYC {__version__}")
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 # Get plot options from json source file
-try:
-    # running locally for testing
-    with open("spyc_spc/plot_options.json") as f:
-        plot_types: Dict[str, Any] = json.load(f)
-except FileNotFoundError:
-    # installed
-    with open(
-        os.path.join(os.path.dirname(__file__), "plot_options.json")
-    ) as f:
+with importlib.resources.path("spyc_spc", "plot_options.json") as plot_options:
+    with open(plot_options) as f:
         plot_types = json.load(f)
 
 # Manage verbose and debug output levels
