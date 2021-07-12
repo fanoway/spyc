@@ -9,4 +9,11 @@
             "violin"
         ]
     }
+    "capability":
+    {
+        "capability":true,
+        "max_locs": 2,
+        options:[]
+    }
+
 }
