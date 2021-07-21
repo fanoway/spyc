@@ -484,7 +484,7 @@ def main():
         else:
             print(f"Launching Server at http://{url}:{port}/")
             wsgiserver = WSGIServer(
-                (url, port), PathInfoDispatcher({"/": server})
+                (url, int(port)), PathInfoDispatcher({"/": server})
             )
 
             try:
