@@ -1,13 +1,14 @@
 """SPYC (pronounced spicy).
   
   Usage:
-      spyc plot <dir> [--verbose|--debug] [--url=<url>] [--port=<port>]
+      spyc plot <dir> [--verbose|--debug] [--url=<url>] [--port=<port>] [--header = <text>]
       spyc -h | --help
       spyc --version
   
   Options:
-      --url=<url>                  Specify the URL
-      --port=<port>                 Specify the Port
+      --url=<url>            Specify the URL
+      --port=<port>          Specify the Port
+      --header               Header to dispal on website
       -h --help              Show this screen.
       --version              Show version.
       -v --verbose           Verbose
@@ -169,10 +170,14 @@ if not part_dict:
 part_dd_options = []
 for pn in list(part_dict.keys()):
     part_dd_options.append({"label": pn, "value": pn})
+    
+header = "SPYC"
+if arguments['--header']:
+  header = arguments['--header']
 
 # Elements to always display. The rest are generate by the code
 disp_elements = [
-    html.H1(children="SPYC"),
+    html.H1(children="header"),
     dcc.Dropdown(
         id="part_dd",
         options=part_dd_options,

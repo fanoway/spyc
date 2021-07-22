@@ -64,7 +64,7 @@ class PartNumber:
             }
 
             # Single call to Excel
-            xls = pd.ExcelFile(filepath)
+            xls = pd.ExcelFile(filepath, engine = "openpyxl")
 
             # Generic header infomation
             self.header: Dict[str, str] = (

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "spyc_spc"
-version = "1.0.2"
+version = "1.1"
 description = "Simple tool to help plot SPC data from multiple locations for comparison"
 authors = ["fanoway <86997883+fanoway@users.noreply.github.com>"]
 readme = "README.md"
